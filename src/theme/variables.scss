@@ -3,8 +3,25 @@
 
 /** Ionic CSS Variables **/
 :root {
+  
+  /** Azul Coal **/
+  --color-azulcoal: #4A88A1;
+  --color-azulcoal-rgb: 74, 136, 161;
+
+  /** Amarelo Queimado **/
+  --ion-color-amarelo: #EA9E02;
+  --ion-color-amarelo-rgb: 234, 158, 2;
+
+  /** Dark Ciano **/
+  --ion-color-darkciano: #264653;
+  --ion-color-darkciano-rgb: 38, 70, 83;
+
+  /** Cinzento **/
+  --ion-color-cinzento: #D6D6D6 ;
+  --ion-color-cinzento: 214, 214, 214;
+  
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #3880ff; //4A88A1 3880ff
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;
@@ -74,6 +91,8 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -235,4 +254,9 @@
 
     --ion-card-background: #1e1e1e;
   }
+}
+
+.ion-color-amarelo {
+  --ion-color-amarelo: var(--ion-color-amarelo);
+  --ion-color-amarelo-rgb: var(--ion-color-amarelo-rgb);
 }
