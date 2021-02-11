@@ -3,23 +3,23 @@
 
 /** Ionic CSS Variables **/
 :root {
-  
+
   /** Azul Coal **/
-  --color-azulcoal: #4A88A1;
-  --color-azulcoal-rgb: 74, 136, 161;
+  --ion-color-azul-coal: #4A88A1;
+  --ion-color-azul-coal-rgb: 74, 136, 161;
 
   /** Amarelo Queimado **/
-  --ion-color-amarelo: #EA9E02;
+  --ion-color-amarelo: #ea9e02;
   --ion-color-amarelo-rgb: 234, 158, 2;
 
   /** Dark Ciano **/
-  --ion-color-darkciano: #264653;
-  --ion-color-darkciano-rgb: 38, 70, 83;
+  --ion-color-dark-ciano: #264653;
+  --ion-color-dark-ciano-rgb: 38, 70, 83;
 
   /** Cinzento **/
-  --ion-color-cinzento: #D6D6D6 ;
-  --ion-color-cinzento: 214, 214, 214;
-  
+  --ion-color-light-cinzento: #D6D6D6 ;
+  --ion-color-light-cinzento-rgb: 214, 214, 214;
+
   /** primary **/
   --ion-color-primary: #3880ff; //4A88A1 3880ff
   --ion-color-primary-rgb: 56, 128, 255;
@@ -92,7 +92,7 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 
-  
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -257,6 +257,21 @@
 }
 
 .ion-color-amarelo {
-  --ion-color-amarelo: var(--ion-color-amarelo);
-  --ion-color-amarelo-rgb: var(--ion-color-amarelo-rgb);
+  --ion-color-base: var(--ion-color-amarelo);
+  --ion-color-base-rgb: var(--ion-color-amarelo-rgb);
+}
+
+.ion-color-azul-coal {
+  --ion-color-base: var(--ion-color-azul-coal);
+  --ion-color-base-rgb: var(--ion-color-azul-coal-rgb);
+}
+
+.ion-color-dark-ciano {
+  --ion-color-base: var(--ion-color-dark-ciano);
+  --ion-color-base-rgb: var(--ion-color-dark-ciano-rgb);
+}
+
+.ion-color-light-cinzento {
+  --ion-color-base: var(--ion-color-light-cinzento);
+  --ion-color-base-rgb: var(--ion-color-light-cinzento-rgb);
 }
