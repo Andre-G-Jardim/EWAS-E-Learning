@@ -14,19 +14,7 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
-  },  {
-    path: 'notificacoes',
-    loadChildren: () => import('./pages/notificacoes/notificacoes.module').then( m => m.NotificacoesPageModule)
-  },
-  {
-    path: 'canalduvidas',
-    loadChildren: () => import('./pages/canalduvidas/canalduvidas.module').then( m => m.CanalduvidasPageModule)
-  },
-  {
-    path: 'servicos',
-    loadChildren: () => import('./pages/servicos/servicos.module').then( m => m.ServicosPageModule)
   }
-
 ];
 
 @NgModule({
