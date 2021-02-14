@@ -3,19 +3,21 @@
 //         --ion-background-color: #D6D6D6
 //     }
 // }
-
-ion-menu{
---background: var(--ion-color-dark-cinzento) !important; 
-    ion-content{            
-        --background: var(--ion-color-dark-cinzento) !important; 
-        ion-item{
-            --background: var(--ion-color-dark-cinzento) !important;
-            --color: #FFFFFF !important;
-            ion-icon{ padding-right: 10px !important; }
+ion-menu {
+    --background: var(--ion-color-dark-cinzento) !important;
+    ion-content {
+        --background: var(--ion-color-dark-cinzento) !important;
+        ion-list {
+            --background: var(--ion-item-background-dark-cinzento) !important;
+            --color: #ffffff !important;
         }
-        ion-list{ 
-            --background: #969696 !important;
-            --color: #FFFFFF !important;   
+        ion-item {
+            --background: var(--ion-color-dark-cinzento) !important;
+            --color: #ffffff !important;
+            --highlight-height: 0;
+            ion-icon {
+                padding-right: 10px !important;
+            }
         }
     }
 }
