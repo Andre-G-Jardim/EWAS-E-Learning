@@ -9,11 +9,15 @@ import { NavController } from '@ionic/angular';
 export class HomePage implements OnInit{
 
   constructor(private navCtrl : NavController) {}
-  
+
   ngOnInit(){}
 
   page_login(){
     this.navCtrl.navigateForward('login');
+  }
+
+  page_cadastro(){
+    this.navCtrl.navigateForward('cadastro');
   }
 
 }

@@ -38,3 +38,7 @@ ion-back-button{
 .toolbar-titulo{
   --color: white !important;
 }
+
+ion-toolbar{
+  --ion-background-color: var(--ion-color-azul-coal)
+}
