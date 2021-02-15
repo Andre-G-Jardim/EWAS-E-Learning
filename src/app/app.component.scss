@@ -8,8 +8,9 @@ ion-menu {
     ion-content {
         --background: var(--ion-color-dark-cinzento) !important;
         ion-list {
-            --background: var(--ion-item-background-dark-cinzento) !important;
+            --background: var(--ion-color-dark-cinzento) !important;
             --color: #ffffff !important;
+            
         }
         ion-item {
             --background: var(--ion-color-dark-cinzento) !important;
