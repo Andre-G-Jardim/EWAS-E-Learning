@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="azul-coal">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
@@ -8,30 +8,19 @@
 
 <ion-content color="light-cinzento">
   <ion-grid>
-
-    <ion-row><h5></h5></ion-row>
-
     <ion-row class="ion-justify-content-center">
-      <ion-col size-xs="8"  size-md="3">
+      <ion-col size-xs="8" size-md="3" class="ion-margin-vertical">
         <ion-img src="../assets/ewasP.png"></ion-img>
       </ion-col>
     </ion-row>
-
-    <ion-row><h5></h5></ion-row>
-    <ion-row><h5></h5></ion-row>
-    <ion-row><h5></h5></ion-row>
-    <ion-row><h5></h5></ion-row>
-
-
-    <ion-row class="ion-justify-content-center">
-      <ion-col size-xs="10" size-md="6">
+    <ion-row class="ion-justify-content-around">
+      <ion-col size-xs="10" size-md="6" class="ion-margin-top">
         <ion-item>
           <ion-label position="floating">E-mail</ion-label>
           <ion-input></ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
-
     <ion-row class="ion-justify-content-center">
       <ion-col size-xs="10" size-md="6">
         <ion-item>
@@ -46,6 +35,5 @@
         <ion-button expand="block" size="large" color="dark-ciano">Entrar</ion-button>
       </ion-col>
     </ion-row>
-
   </ion-grid>
 </ion-content>
