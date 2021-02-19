@@ -40,5 +40,18 @@ ion-back-button{
 }
 
 ion-toolbar{
-  --ion-background-color: var(--ion-color-azul-coal)
+  --background: var(--ion-color-azul-coal) !important;
+}
+
+.titulo {
+  font-size: 2.5em;
+  font-family: roboto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.subtitulo {
+  font-size: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }

@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header slot="fixed">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
@@ -6,6 +6,51 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="light-cinzento">
+<ion-content>
+
+  <ion-grid>
+
+    <ion-row class="ion-justify-content-center">
+
+      <ion-col size-xs="10" size-md="6">
+
+        <ion-text>
+          <p class="titulo" style="margin-bottom: 1em">Crie sua conta</p>
+        </ion-text>
+
+        <ion-text >
+          <p class="subtitulo">Nome</p>
+        </ion-text>
+
+        <ion-item>
+          <ion-input name="nome" type="text" placeholder="Nome Completo" ngModel required></ion-input>
+        </ion-item>
+
+        <ion-text >
+          <p class="subtitulo">Email</p>
+        </ion-text>
+
+        <ion-item>
+          <ion-input name="email" type="email" placeholder="seuemail@procempa.com.br" ngModel required></ion-input>
+        </ion-item>
+
+        <ion-text >
+          <p class="subtitulo">Senha</p>
+        </ion-text>
+
+        <ion-item>
+          <ion-input name="senha" type="password" placeholder="Senha" ngModel required></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" size="large" color="dark-ciano">Cadastrar</ion-button>
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
 
 </ion-content>
+
+
+
