@@ -18,28 +18,28 @@
           <p class="titulo" style="margin-bottom: 1em">Crie sua conta</p>
         </ion-text>
 
-        <ion-text >
-          <p class="subtitulo">Nome</p>
-        </ion-text>
-
         <ion-item>
-          <ion-input name="nome" type="text" placeholder="Nome Completo" ngModel required></ion-input>
+          <ion-label position="floating">Nome Completo</ion-label>
+          <ion-input name="nome" type="text" ngModel required></ion-input>
         </ion-item>
 
-        <ion-text >
-          <p class="subtitulo">Email</p>
-        </ion-text>
-
-        <ion-item>
-          <ion-input name="email" type="email" placeholder="seuemail@procempa.com.br" ngModel required></ion-input>
+        <ion-item style="margin-bottom: 0em;">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input name="email" type="email" ngModel required></ion-input>
         </ion-item>
 
-        <ion-text >
-          <p class="subtitulo">Senha</p>
+        <ion-text>
+          <p style="margin-bottom: 2em;" class="sub-input">Ex: seuemail@procempa.com.br</p>
         </ion-text>
 
         <ion-item>
-          <ion-input name="senha" type="password" placeholder="Senha" ngModel required></ion-input>
+          <ion-label position="floating">Senha</ion-label>
+          <ion-input name="senha" type="password" ngModel required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Confirme a senha</ion-label>
+          <ion-input name="re-senha" type="password" ngModel required></ion-input>
         </ion-item>
 
         <ion-button expand="block" size="large" color="dark-ciano">Cadastrar</ion-button>
