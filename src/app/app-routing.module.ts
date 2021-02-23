@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LoginGuard } from './pages/login/login.guard';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+    canLoad: [LoginGuard]
   },
   {
     path: '',
@@ -17,15 +19,18 @@ const routes: Routes = [
   },
   {
     path: 'notificacoes',
-    loadChildren: () => import('./pages/notificacoes/notificacoes.module').then( m => m.NotificacoesPageModule)
+    loadChildren: () => import('./pages/notificacoes/notificacoes.module').then( m => m.NotificacoesPageModule),
+    canLoad: [LoginGuard]
   },
   {
     path: 'canalduvidas',
-    loadChildren: () => import('./pages/canalduvidas/canalduvidas.module').then( m => m.CanalduvidasPageModule)
+    loadChildren: () => import('./pages/canalduvidas/canalduvidas.module').then( m => m.CanalduvidasPageModule),
+    canLoad: [LoginGuard]
   },
   {
     path: 'servicos',
-    loadChildren: () => import('./pages/servicos/servicos.module').then( m => m.ServicosPageModule)
+    loadChildren: () => import('./pages/servicos/servicos.module').then( m => m.ServicosPageModule),
+    canLoad: [LoginGuard]
   },
   {
     path: 'cadastro',

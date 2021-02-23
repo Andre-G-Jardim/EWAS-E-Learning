@@ -19,7 +19,13 @@ export class CadastroPage implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    console.log(form);
+    if(!form.valid){
+      return;
+    }
+    const nome = form.value.nome;
+    const email = form.value.email;
+    const senha = form.value.senha;
+    console.log(nome, email, senha);
   }
 
 }
