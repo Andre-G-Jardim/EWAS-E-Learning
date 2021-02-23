@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -15,6 +16,10 @@ export class CadastroPage implements OnInit {
 
   page_login(){
     this.navCtrl.navigateForward('login');
+  }
+
+  onSubmit(form: NgForm){
+    console.log(form);
   }
 
 }
