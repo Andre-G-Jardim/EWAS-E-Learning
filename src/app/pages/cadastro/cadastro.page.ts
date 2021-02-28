@@ -61,6 +61,7 @@ export class CadastroPage implements OnInit {
       delete novoUsuarioObject.senha;
 
       await this.afs.collection('Usuarios').doc(novoUsuario.user.uid).set(novoUsuarioObject);
+      await novoUsuario.user.sendEmailVerification();
       this.fGroup.get('nome').setValue(null);
       this.fGroup.get('email').setValue(null);
       this.fGroup.get('senha').setValue(null);

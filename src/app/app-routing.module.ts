@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './pages/login/auth.guard';
 import { LoginGuard } from './pages/login/login.guard';
+import { VerifyGuard } from './pages/login/verify.guard';
 
 const routes: Routes = [
   {
@@ -38,7 +39,13 @@ const routes: Routes = [
     path: 'cadastro',
     loadChildren: () => import('./pages/cadastro/cadastro.module').then( m => m.CadastroPageModule),
     canActivate: [LoginGuard]
+  },
+  {
+    path: 'verificacao',
+    loadChildren: () => import('./pages/verificacao/verificacao.module').then( m => m.VerificacaoPageModule),
+    canActivate: [VerifyGuard]
   }
+
 
 ];
 

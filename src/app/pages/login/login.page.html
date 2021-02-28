@@ -28,7 +28,7 @@
 
           <ion-item>
             <ion-label position="floating">Senha</ion-label>
-            <ion-input name="senha" type="password" ngModel required minlength="8" #senhaCtrl="ngModel" [(ngModel)]="usuarioLogin.senha"></ion-input>
+            <ion-input name="senha" type="password" ngModel required minlength="6" #senhaCtrl="ngModel" [(ngModel)]="usuarioLogin.senha"></ion-input>
             <p class="msgErro" *ngIf="!senhaCtrl.valid && senhaCtrl.touched">Mínimo de 8 caracteres</p>
           </ion-item>
 
