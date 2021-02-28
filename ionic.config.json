@@ -1,5 +1,7 @@
 {
   "name": "ewas",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
