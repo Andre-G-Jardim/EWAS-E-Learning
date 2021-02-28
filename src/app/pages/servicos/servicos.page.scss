@@ -1,0 +1,18 @@
+#map{
+    height: 250px;
+    width: 100%;
+}
+ion-list {
+    background: var(--ion-color-light-cinzento) !important;
+    --color: #ffffff !important;
+}
+
+ion-item {
+    --background: var(--ion-color-light-cinzento) !important;
+    --color: #000000 !important;
+    --highlight-height: 0;
+}
+
+ion-label{
+    --color: #000000 !important;
+}
