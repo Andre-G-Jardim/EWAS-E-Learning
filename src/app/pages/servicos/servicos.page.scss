@@ -1,7 +1,19 @@
-#map{
-    height: 250px;
+.map{
+    position: relative;
+    // left: 20px;
+    // right: 50px;
+    height: 25rem;
     width: 100%;
+
+    background-color: transparent;
+
+    opacity: 0;
+    transition: opacity 150ms ease-in;
 }
+.map.visible {
+    opacity: 1;
+}
+
 ion-list {
     background: var(--ion-color-light-cinzento) !important;
     --color: #ffffff !important;
