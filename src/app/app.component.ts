@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from './pages/login/login.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private loginService: LoginService) {}
+
+  async logout(){
+    try{
+      await this.loginService.logout();
+
+    } catch(error){
+      console.error(error);
+
+    }
+  }
 }

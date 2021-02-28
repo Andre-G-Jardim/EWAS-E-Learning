@@ -22,9 +22,8 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  onLogin(){
-    this.loginService.logado();
-    this.router.navigateByUrl("/home");
+  redefinirSenha(){
+    this.router.navigateByUrl("");
   }
 
   async onSubmit(form: NgForm){

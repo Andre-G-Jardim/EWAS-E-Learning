@@ -28,11 +28,11 @@ export class LoginService {
   }
 
   logout(){
-    this._usuarioAutenticado = false;
+    return this.afa.signOut();
   }
 
   getAuth(){
-    return this.afa.onAuthStateChanged;
+    return this.afa;
   }
 
 }

@@ -11,7 +11,7 @@ export class AuthGuard implements CanActivate {
 
   canActivate(): Promise<boolean> {
     return new Promise(resolve => {
-      this.loginService.getAuth()(user =>{
+      this.loginService.getAuth().onAuthStateChanged(user =>{
         if(!user) this.router.navigateByUrl('/cadastro');
         resolve(user ? true : false);
       });

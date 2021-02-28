@@ -32,7 +32,9 @@
             <p class="msgErro" *ngIf="!senhaCtrl.valid && senhaCtrl.touched">Mínimo de 8 caracteres</p>
           </ion-item>
 
-          <ion-button type="submit" expand="block" size="large" color="dark-ciano" [disabled]="!formLogin.valid">Entrar</ion-button>
+          <ion-button type="submit" expand="block" size="large" color="dark-ciano">Entrar</ion-button>
+          <ion-button fill="clear" expand="block" (click)="redefinirSenha()" size="large">Esqueci minha senha</ion-button>
+
 
         </form>
 
