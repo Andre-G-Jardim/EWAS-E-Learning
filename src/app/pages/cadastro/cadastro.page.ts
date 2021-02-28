@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { NgForm } from '@angular/forms';
 import { LoadingController, NavController, ToastController } from '@ionic/angular';
 import { User } from 'app/interface/user';
@@ -17,7 +19,8 @@ export class CadastroPage implements OnInit {
   constructor(private navCtrl: NavController,
     private loginService: LoginService,
     private loadingCtrl: LoadingController,
-    private toastCtrl: ToastController) { }
+    private toastCtrl: ToastController,
+    private afs: AngularFirestore) { }
 
   ngOnInit() {
   }
@@ -32,7 +35,13 @@ export class CadastroPage implements OnInit {
     }
     await this.presentLoading();
     try{
-      await this.loginService.cadastro(this.usuarioCadastro);
+      const novoUsuario = await this.loginService.cadastro(this.usuarioCadastro);
+      const novoUsuarioObject = Object.assign({}, this.usuarioCadastro);
+
+      delete novoUsuarioObject.email;
+      delete novoUsuarioObject.senha;
+
+      await this.afs.collection('Usuarios').doc(novoUsuario.user.uid).set(novoUsuarioObject);
     } catch(error ){
       let message: string;
       switch(error.code){
