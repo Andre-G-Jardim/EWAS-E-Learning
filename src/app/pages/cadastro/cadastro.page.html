@@ -41,16 +41,22 @@
             <p class="titulo" style="margin-bottom: 1em">Crie sua conta</p>
           </ion-text>
 
-          <form #formCad="ngForm" (ngSubmit)="onSubmit(formCad)">
+          <form [formGroup]="fGroup">
             <ion-item>
               <ion-label position="floating">Nome Completo</ion-label>
-              <ion-input name="nome" type="text" ngModel required [(ngModel)]="usuarioCadastro.nome"></ion-input>
+              <ion-input name="nome" type="text" formControlName="nome"></ion-input>
+              <div *ngIf="fGroup.controls.nome.errors && fGroup.controls.nome.touched">
+                <p class="msgErro" *ngIf="fGroup.controls.nome.errors.required">Este campo é obrigatório</p>
+              </div>
             </ion-item>
 
             <ion-item style="margin-bottom: 0em;">
               <ion-label position="floating">Email</ion-label>
-              <ion-input name="email" type="email" ngModel required email #emailCtrl="ngModel" [(ngModel)]="usuarioCadastro.email"></ion-input>
-              <p class="msgErro" *ngIf="!emailCtrl.valid && emailCtrl.touched">Por favor, insira um email válido.</p>
+              <ion-input name="email" type="email" formControlName="email"></ion-input>
+              <div *ngIf="fGroup.controls.email.errors && fGroup.controls.email.touched">
+                <p class="msgErro" *ngIf="fGroup.controls.email.errors.required">Este campo é obrigatório</p>
+                <p class="msgErro" *ngIf="fGroup.controls.email.errors.pattern">Endereço de e-mail inválido</p>
+              </div>
             </ion-item>
 
             <ion-text>
@@ -59,11 +65,14 @@
 
             <ion-item>
               <ion-label position="floating">Senha</ion-label>
-              <ion-input name="senha" type="password" ngModel required minlength="8" #senhaCtrl="ngModel" [(ngModel)]="usuarioCadastro.senha"></ion-input>
-              <p class="msgErro" *ngIf="!senhaCtrl.valid && senhaCtrl.touched">Mínimo de 8 caracteres</p>
+              <ion-input name="senha" type="password" formControlName="senha"></ion-input>
+              <div *ngIf="fGroup.controls.senha.errors && fGroup.controls.senha.touched">
+                <p class="msgErro" *ngIf="fGroup.controls.senha.errors.required">Este campo é obrigatório</p>
+                <p class="msgErro" *ngIf="fGroup.controls.senha.errors.minlength">Senha precisa ter mais de 6 caracteres</p>
+              </div>
             </ion-item>
 
-            <ion-button type="submit" expand="block" size="large" color="dark-ciano">Cadastrar</ion-button>
+            <ion-button (click)="onSubmitForm()" expand="block" size="large" color="dark-ciano" [disabled]="!this.fGroup.valid">Cadastrar</ion-button>
           </form>
         </ion-col>
 
