@@ -22,17 +22,17 @@
 
           <ion-item>
             <ion-label position="floating">E-mail</ion-label>
-            <ion-input name="email" type="email" ngModel required email #emailCtrl="ngModel"></ion-input>
+            <ion-input name="email" type="email" ngModel required email #emailCtrl="ngModel" [(ngModel)]="usuarioLogin.email"></ion-input>
             <p class="msgErro" *ngIf="!emailCtrl.valid && emailCtrl.touched">Por favor, insira um email válido.</p>
           </ion-item>
 
           <ion-item>
             <ion-label position="floating">Senha</ion-label>
-            <ion-input name="senha" type="password" ngModel required minlength="8" #senhaCtrl="ngModel"></ion-input>
+            <ion-input name="senha" type="password" ngModel required minlength="8" #senhaCtrl="ngModel" [(ngModel)]="usuarioLogin.senha"></ion-input>
             <p class="msgErro" *ngIf="!senhaCtrl.valid && senhaCtrl.touched">Mínimo de 8 caracteres</p>
           </ion-item>
 
-          <ion-button type="submit" expand="block" size="large" color="dark-ciano" [disabled]="!formLogin.valid" (click)="onLogin()">Entrar</ion-button>
+          <ion-button type="submit" expand="block" size="large" color="dark-ciano" [disabled]="!formLogin.valid">Entrar</ion-button>
 
         </form>
 

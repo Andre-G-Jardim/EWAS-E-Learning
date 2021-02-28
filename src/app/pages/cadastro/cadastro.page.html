@@ -49,7 +49,7 @@
 
             <ion-item style="margin-bottom: 0em;">
               <ion-label position="floating">Email</ion-label>
-              <ion-input name="email" type="email" ngModel required email #emailCtrl="ngModel"></ion-input>
+              <ion-input name="email" type="email" ngModel required email #emailCtrl="ngModel" [(ngModel)]="usuarioCadastro.email"></ion-input>
               <p class="msgErro" *ngIf="!emailCtrl.valid && emailCtrl.touched">Por favor, insira um email válido.</p>
             </ion-item>
 
@@ -59,17 +59,11 @@
 
             <ion-item>
               <ion-label position="floating">Senha</ion-label>
-              <ion-input name="senha" type="password" ngModel required minlength="8" #senhaCtrl="ngModel"></ion-input>
+              <ion-input name="senha" type="password" ngModel required minlength="8" #senhaCtrl="ngModel" [(ngModel)]="usuarioCadastro.senha"></ion-input>
               <p class="msgErro" *ngIf="!senhaCtrl.valid && senhaCtrl.touched">Mínimo de 8 caracteres</p>
             </ion-item>
 
-            <ion-item>
-              <ion-label position="floating">Confirme a senha</ion-label>
-              <ion-input name="re-senha" type="password" ngModel required minlength="8" #resenhaCtrl="ngModel"></ion-input>
-              <!--<p class="msgErro" *ngIf="!resenhaCtrl.valid && resenhaCtrl.touched">Senhas diferentes</p>-->
-            </ion-item>
-
-            <ion-button type="submit" expand="block" size="large" color="dark-ciano" [disabled]="!formCad.valid">Cadastrar</ion-button>
+            <ion-button type="submit" expand="block" size="large" color="dark-ciano">Cadastrar</ion-button>
           </form>
         </ion-col>
 

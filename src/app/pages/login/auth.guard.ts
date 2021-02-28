@@ -1,19 +1,19 @@
-import { Route } from '@angular/compiler/src/core';
 import { Injectable } from '@angular/core';
-import { UrlTree, UrlSegment, Router, CanActivate } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { LoginService } from './login.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class LoginGuard implements CanActivate {
+export class AuthGuard implements CanActivate {
   constructor(private loginService: LoginService, private router: Router){}
 
   canActivate(): Promise<boolean> {
     return new Promise(resolve => {
       this.loginService.getAuth()(user =>{
-        if(user) this.router.navigateByUrl('/home');
-        resolve(!user ? true : false);
+        if(!user) this.router.navigateByUrl('/cadastro');
+        resolve(user ? true : false);
       });
     });
   }

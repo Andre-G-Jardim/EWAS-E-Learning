@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ewas-e-learning": {
+      "hosting": {
+        "app": [
+          "ewas-e-learning"
+        ]
+      }
+    }
+  }
+}
