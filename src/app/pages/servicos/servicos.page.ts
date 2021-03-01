@@ -18,7 +18,7 @@ export class ServicosPage implements AfterViewInit {
   // map: any;
 
   @ViewChild('map', { read: ElementRef, static: false }) mapElementRef: ElementRef;
-  @Input() center={lat: -30.0315623, lng: -51.220873} //coords ufcspa
+  @Input() ufcspa_loc={lat: -30.0315623, lng: -51.220873} 
   location: string;
   places: Array<any>;
   isLoading = false;
@@ -102,14 +102,14 @@ export class ServicosPage implements AfterViewInit {
     this.getGoogleMaps().then(googleMaps => {
       const mapEl = this.mapElementRef.nativeElement;
       const mapActual = new googleMaps.Map(mapEl, {
-        center: this.center,
+        center: this.ufcspa_loc,
         zoom: 16
       });
       googleMaps.event.addListenerOnce(mapActual, 'idle', () => {
         this.renderer.addClass(mapEl, 'visible');
       });
       const marker = new googleMaps.Marker({
-        position: this.center,
+        position: this.ufcspa_loc,
         map: mapActual,
         title: "Você"
       });
@@ -121,8 +121,8 @@ export class ServicosPage implements AfterViewInit {
 
   private showErrorAlert() {
     this.alertCtrl.create({
-      header: 'Não foi possível obter a localização atual',
-      message: 'Por favor, tente novamente',
+      header: 'Não foi possível obter a localização atual!',
+      message: 'Por favor, tente novamente ou forneça a permissão necessária',
       buttons: ['OK']
     }).then(alertEl => alertEl.present());
   }
