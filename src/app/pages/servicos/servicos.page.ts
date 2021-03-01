@@ -22,7 +22,7 @@ export class ServicosPage implements AfterViewInit {
     this.getGoogleMaps().then(googleMaps => {
       const mapEl = this.mapElementRef.nativeElement;
       const map = new googleMaps.Map(mapEl, {
-        //center: { lat: -30.0277, lng: -51.2287}, coords poa
+        //center: { lat: -30.0277, lng: -51.2287}, //coords poa
         center: { lat: -30.0313503, lng: -51.2212936 }, //coords ufcspa
         zoom: 16
       });
