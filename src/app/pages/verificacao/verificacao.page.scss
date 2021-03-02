@@ -1,22 +1,10 @@
-.ion-margin-bottom{
-    margin-bottom: 64px;
-}
-
-.ion-margin-vertical{
-    margin-top: 16px;
-    margin-bottom: 64px;
-}
-
-.ion-margin-top{
-    margin-top: 32px;
-}
-
 ion-content{
   --background: var(--ion-color-light-cinzento) !important;
 }
 
 ion-grid{
   height: 100%;
+  padding: 0em;
 }
 
 ion-row{
@@ -29,12 +17,4 @@ ion-row{
 
 ion-item{
   margin-bottom: 2em;
-}
-
-.img{
-  margin-bottom: 2em;
-}
-
-.msgErro{
-  color: var(--ion-color-danger);
 }

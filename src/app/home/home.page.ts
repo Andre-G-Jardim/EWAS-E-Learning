@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { LoginService } from 'app/pages/login/login.service';
 
 @Component({
   selector: 'app-home',
@@ -8,16 +8,8 @@ import { NavController } from '@ionic/angular';
 })
 export class HomePage implements OnInit{
 
-  constructor(private navCtrl : NavController) {}
+  constructor() {}
 
   ngOnInit(){}
-
-  page_login(){
-    this.navCtrl.navigateForward('login');
-  }
-
-  page_cadastro(){
-    this.navCtrl.navigateForward('cadastro');
-  }
 
 }

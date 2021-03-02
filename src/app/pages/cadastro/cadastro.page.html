@@ -35,41 +35,48 @@
 
     <ion-row class="ion-justify-content-center">
 
-      <ion-col size-xs="10" size-md="6">
+        <ion-col size-xs="10" size-md="6">
 
-        <ion-text>
-          <p class="titulo" style="margin-bottom: 1em">Crie sua conta</p>
-        </ion-text>
+          <ion-text>
+            <p class="titulo" style="margin-bottom: 1em">Crie sua conta</p>
+          </ion-text>
 
-        <ion-item>
-          <ion-label position="floating">Nome Completo</ion-label>
-          <ion-input name="nome" type="text" ngModel required></ion-input>
-        </ion-item>
+          <form [formGroup]="fGroup">
+            <ion-item>
+              <ion-label position="floating">Nome Completo</ion-label>
+              <ion-input name="nome" type="text" formControlName="nome"></ion-input>
+              <div *ngIf="fGroup.controls.nome.errors && fGroup.controls.nome.touched">
+                <p class="msgErro" *ngIf="fGroup.controls.nome.errors.required">Este campo é obrigatório</p>
+              </div>
+            </ion-item>
 
-        <ion-item style="margin-bottom: 0em;">
-          <ion-label position="floating">Email</ion-label>
-          <ion-input name="email" type="email" ngModel required></ion-input>
-        </ion-item>
+            <ion-item style="margin-bottom: 0em;">
+              <ion-label position="floating">Email</ion-label>
+              <ion-input name="email" type="email" formControlName="email"></ion-input>
+              <div *ngIf="fGroup.controls.email.errors && fGroup.controls.email.touched">
+                <p class="msgErro" *ngIf="fGroup.controls.email.errors.required">Este campo é obrigatório</p>
+                <p class="msgErro" *ngIf="fGroup.controls.email.errors.pattern">Endereço de e-mail inválido</p>
+              </div>
+            </ion-item>
 
-        <ion-text>
-          <p style="margin-bottom: 2em;" class="sub-input">Ex: seuemail@procempa.com.br</p>
-        </ion-text>
+            <ion-text>
+              <p style="margin-bottom: 2em;" class="sub-input">Ex: seuemail@procempa.com.br</p>
+            </ion-text>
 
-        <ion-item>
-          <ion-label position="floating">Senha</ion-label>
-          <ion-input name="senha" type="password" ngModel required></ion-input>
-        </ion-item>
+            <ion-item>
+              <ion-label position="floating">Senha</ion-label>
+              <ion-input name="senha" type="password" formControlName="senha"></ion-input>
+              <div *ngIf="fGroup.controls.senha.errors && fGroup.controls.senha.touched">
+                <p class="msgErro" *ngIf="fGroup.controls.senha.errors.required">Este campo é obrigatório</p>
+                <p class="msgErro" *ngIf="fGroup.controls.senha.errors.minlength">Senha precisa ter mais de 6 caracteres</p>
+              </div>
+            </ion-item>
 
-        <ion-item>
-          <ion-label position="floating">Confirme a senha</ion-label>
-          <ion-input name="re-senha" type="password" ngModel required></ion-input>
-        </ion-item>
+            <ion-button (click)="onSubmitForm()" expand="block" size="large" color="dark-ciano" [disabled]="!this.fGroup.valid">Cadastrar</ion-button>
+          </form>
+        </ion-col>
 
-        <ion-button expand="block" size="large" color="dark-ciano">Cadastrar</ion-button>
-
-      </ion-col>
-
-    </ion-row>
+      </ion-row>
 
   </ion-grid>
 
