@@ -44,6 +44,10 @@ const routes: Routes = [
     path: 'verificacao',
     loadChildren: () => import('./pages/verificacao/verificacao.module').then( m => m.VerificacaoPageModule),
     canActivate: [VerifyGuard]
+  },
+  {
+    path: 'modal-oneboarding',
+    loadChildren: () => import('./pages/modal-oneboarding/modal-oneboarding.module').then( m => m.ModalOneboardingPageModule)
   }
 
 

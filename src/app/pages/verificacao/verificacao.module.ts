@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { VerificacaoPageRoutingModule } from './verificacao-routing.module';
 
 import { VerificacaoPage } from './verificacao.page';
+import { ModalOneboardingPage } from '../modal-oneboarding/modal-oneboarding.page';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { VerificacaoPage } from './verificacao.page';
     IonicModule,
     VerificacaoPageRoutingModule
   ],
-  declarations: [VerificacaoPage]
+  declarations: [VerificacaoPage, ModalOneboardingPage],
+  entryComponents: [ModalOneboardingPage]
 })
 export class VerificacaoPageModule {}
