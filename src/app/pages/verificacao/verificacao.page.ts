@@ -11,6 +11,10 @@ export class VerificacaoPage implements OnInit {
 
   constructor(private modalCtrl: ModalController) { }
 
+  ionViewDidEnter() {
+    this.oneboarding();
+   }
+
   ngOnInit() {
   }
 
