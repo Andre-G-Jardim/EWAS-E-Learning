@@ -1,4 +1,4 @@
-<ion-content color="dark-ciano">
+<ion-content color="white">
   <ion-slides>
     <ion-slide>
       <div class="slide">
@@ -29,8 +29,12 @@
         <img src="../assets/ewasP.png"/>
         <h4>Título</h4>
         <p>The ionic conference app is a practical preview of the ionic framework in action, and a demonstration of proper code use.</p>
-        <ion-button fill="clear">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
       </div>
     </ion-slide>
+
+    <ion-slide>
+      <ion-button fill="clear" size="large" (click)="close()">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+    </ion-slide>
+
   </ion-slides>
 </ion-content>
