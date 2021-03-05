@@ -29,6 +29,11 @@ ion-item{
   background: var(--ion-color-dark-ciano)
 }
 
+.container-secundario{
+  margin: 0em;
+  background: var(--ion-color-light)
+}
+
 .titulo-color{
   color: #fff;
 }
@@ -42,5 +47,28 @@ ion-item{
 
 .msgErro{
   color: var(--ion-color-danger);
+}
+
+.img{
+  margin-bottom: 3em;
+}
+
+.justificado{
+  text-align:justify;
+}
+
+@media screen and (min-width : 320px)
+{
+  .justificado
+  {
+    font-size: large;
+  }
+}
+@media screen and (min-width: 768px)
+{
+  .justificado
+  {
+    font-size: large;
+  }
 }
 
