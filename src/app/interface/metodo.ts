@@ -1,4 +1,5 @@
 export interface Metodo {
+  id?: string;
   titulo?: string;
   imagem?: string;
   efetividadeTitulo?: string;
