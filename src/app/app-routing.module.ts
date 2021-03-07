@@ -44,7 +44,23 @@ const routes: Routes = [
     path: 'verificacao',
     loadChildren: () => import('./pages/verificacao/verificacao.module').then( m => m.VerificacaoPageModule),
     canActivate: [VerifyGuard]
+  },
+  {
+    path: 'metodos',
+    loadChildren: () => import('./pages/metodos/metodos.module').then( m => m.MetodosPageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'metodos-conteudo',
+    loadChildren: () => import('./pages/metodos-conteudo/metodos-conteudo.module').then( m => m.MetodosConteudoPageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'metodos-conteudo/:id',
+    loadChildren: () => import('./pages/metodos-conteudo/metodos-conteudo.module').then( m => m.MetodosConteudoPageModule),
+    canActivate: [AuthGuard]
   }
+
 
 
 ];
