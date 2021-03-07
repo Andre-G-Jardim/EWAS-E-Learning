@@ -1,6 +1,5 @@
 export interface Metodo {
   titulo?: string;
-  subtitulo?: string;
   imagem?: string;
   efetividadeTitulo?: string;
   efetividadeConteudo?: string;
