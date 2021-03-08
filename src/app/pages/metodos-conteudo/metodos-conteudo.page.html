@@ -1,9 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/metodos"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-row style="margin-top: 5%; margin-bottom: 5%;">
+    <ion-col size="10" offset="1">
+      <ion-card id="full">
+        <p>{{ metodo.titulo }}</p>
+        <img src="../assets/img-metodos/{{ metodo.imagem }}">
+        <p>{{ metodo.efetividadeTitulo }}</p>
+        <p>{{ metodo.efetividadeConteudo }}</p>
+        <p>{{ metodo.efetividadeImagem }}</p>
+        <p>{{ metodo.efetividadeTitulo2 }}</p>
+        <p>{{ metodo.efetividadeConteudo2 }}</p>
+        <p>{{ metodo.efetividadeImagem2 }}</p>
+        <p>{{ metodo.efetividadeConclusao }}</p>
+        <li *ngFor="let conteudo of metodo.conteudo">{{ conteudo }}</li>
 
+      </ion-card>
+    </ion-col>
+  </ion-row>
 </ion-content>

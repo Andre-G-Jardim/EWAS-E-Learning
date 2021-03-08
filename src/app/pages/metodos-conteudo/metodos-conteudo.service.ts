@@ -28,6 +28,6 @@ export class MetodosConteudoService {
    }
 
    getMetodo(id: string){
-
+    return this.metodosCollection.doc<Metodo>(id).valueChanges();
    }
 }
