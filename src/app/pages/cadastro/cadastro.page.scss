@@ -29,6 +29,11 @@ ion-item{
   background: var(--ion-color-dark-ciano)
 }
 
+.container-secundario{
+  margin: 0em;
+  background: var(--ion-color-light)
+}
+
 .titulo-color{
   color: #fff;
 }
@@ -43,4 +48,57 @@ ion-item{
 .msgErro{
   color: var(--ion-color-danger);
 }
+
+.img{
+  margin-bottom: 3em;
+}
+
+.justificado{
+  text-align: justify;
+  font-family: 'Roboto';
+}
+
+@media only screen and (min-width : 320px)
+{
+  .justificado
+  {
+    line-height: 1.5em;
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (min-width:480px)
+{
+  .justificado
+  {
+
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width:600px)
+{
+  .justificado
+  {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width:801px)
+{
+  .justificado
+  {
+    font-size: large;
+  }
+}
+
+@media only screen and (min-width:1025px)
+{
+  .justificado
+  {
+    font-size: large;
+  }
+}
+
+
 
