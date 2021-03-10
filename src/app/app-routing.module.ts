@@ -63,13 +63,21 @@ const routes: Routes = [
     path: 'metodos-conteudo/:id',
     loadChildren: () => import('./pages/metodos-conteudo/metodos-conteudo.module').then( m => m.MetodosConteudoPageModule),
     canActivate: [AuthGuard]
-  },  {
+  },
+  {
     path: 'videos',
-    loadChildren: () => import('./pages/videos/videos.module').then( m => m.VideosPageModule)
+    loadChildren: () => import('./pages/videos/videos.module').then( m => m.VideosPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'videos-tema',
-    loadChildren: () => import('./pages/videos-tema/videos-tema.module').then( m => m.VideosTemaPageModule)
+    loadChildren: () => import('./pages/videos-tema/videos-tema.module').then( m => m.VideosTemaPageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'videos-tema/:id',
+    loadChildren: () => import('./pages/videos-tema/videos-tema.module').then( m => m.VideosTemaPageModule),
+    canActivate: [AuthGuard]
   }
 
 
