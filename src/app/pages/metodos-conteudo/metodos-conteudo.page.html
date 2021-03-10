@@ -8,19 +8,47 @@
 
 <ion-content>
   <ion-row style="margin-top: 5%; margin-bottom: 5%;">
-    <ion-col size="10" offset="1">
+    <ion-col size-md="10" offset-md="1" size-xs="11">
       <ion-card id="full">
-        <p>{{ metodo.titulo }}</p>
-        <img src="../assets/img-metodos/{{ metodo.imagem }}">
-        <p>{{ metodo.efetividadeTitulo }}</p>
-        <p>{{ metodo.efetividadeConteudo }}</p>
-        <p>{{ metodo.efetividadeImagem }}</p>
-        <p>{{ metodo.efetividadeTitulo2 }}</p>
-        <p>{{ metodo.efetividadeConteudo2 }}</p>
-        <p>{{ metodo.efetividadeImagem2 }}</p>
-        <p>{{ metodo.efetividadeConclusao }}</p>
-        <li *ngFor="let conteudo of metodo.conteudo">{{ conteudo }}</li>
-
+        <ion-row style="margin-bottom: 2em;">
+          <ion-col size-xs="5" size-md="3">
+            <div id="img">
+              <img  src="../assets/img-metodos/{{ metodo.imagem }}">
+            </div>
+          </ion-col>
+          <ion-col size-xs="7" size-md="9">
+            <ion-item-divider>
+              <h1><b>{{ metodo.titulo }}</b></h1>
+            </ion-item-divider>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="5">
+            <h1><b>Efetividade</b></h1>
+            <ion-row>
+              <ion-col size="6">
+                <p>{{ metodo.efetividadeImagem }}</p>
+              </ion-col>
+              <ion-col size="6">
+                <p><b>{{ metodo.efetividadeTitulo }}</b></p>
+                <p>{{ metodo.efetividadeConteudo }}</p>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
+                <p>{{ metodo.efetividadeImagem2 }}</p>
+              </ion-col>
+              <ion-col size="6">
+                <p><b>{{ metodo.efetividadeTitulo2 }}</b></p>
+                <p>{{ metodo.efetividadeConteudo2 }}</p>
+              </ion-col>
+            </ion-row>
+            <h4><b>{{ metodo.efetividadeConclusao }}</b></h4>
+          </ion-col>
+          <ion-col size="7">
+            <li *ngFor="let conteudo of metodo.conteudo" style="margin-bottom: 1em;">{{ conteudo }}</li>
+          </ion-col>
+        </ion-row>
       </ion-card>
     </ion-col>
   </ion-row>
