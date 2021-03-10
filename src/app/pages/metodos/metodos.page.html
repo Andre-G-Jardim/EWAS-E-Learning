@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="toolbar-titulo">Métodos Contraceptivos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col id="cont" size-sm="10" offset-md="2" size-md="8" size-lg="6" offset-lg="3">
+        <ion-list style="background: #D6D6D6;" >
+          <ion-item style="--background: {{ metodo.corS }}; margin-bottom: 1em;" *ngFor="let metodo of metodos" button [routerLink]="['/metodos-conteudo', metodo.id]">
+            <ion-avatar slot="start">
+              <img src="../assets/img-metodos/med.png">
+            </ion-avatar>
+            <ion-label>
+              {{ metodo.titulo }}
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

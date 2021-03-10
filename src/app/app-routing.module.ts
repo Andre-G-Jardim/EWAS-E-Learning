@@ -48,8 +48,22 @@ const routes: Routes = [
   {
     path: 'modal-oneboarding',
     loadChildren: () => import('./pages/modal-oneboarding/modal-oneboarding.module').then( m => m.ModalOneboardingPageModule)
+  },
+  {
+    path: 'metodos',
+    loadChildren: () => import('./pages/metodos/metodos.module').then( m => m.MetodosPageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'metodos-conteudo',
+    loadChildren: () => import('./pages/metodos-conteudo/metodos-conteudo.module').then( m => m.MetodosConteudoPageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'metodos-conteudo/:id',
+    loadChildren: () => import('./pages/metodos-conteudo/metodos-conteudo.module').then( m => m.MetodosConteudoPageModule),
+    canActivate: [AuthGuard]
   }
-
 
 ];
 
