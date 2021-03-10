@@ -63,7 +63,15 @@ const routes: Routes = [
     path: 'metodos-conteudo/:id',
     loadChildren: () => import('./pages/metodos-conteudo/metodos-conteudo.module').then( m => m.MetodosConteudoPageModule),
     canActivate: [AuthGuard]
+  },  {
+    path: 'videos',
+    loadChildren: () => import('./pages/videos/videos.module').then( m => m.VideosPageModule)
+  },
+  {
+    path: 'videos-tema',
+    loadChildren: () => import('./pages/videos-tema/videos-tema.module').then( m => m.VideosTemaPageModule)
   }
+
 
 ];
 
