@@ -3,6 +3,10 @@
 //         --ion-background-color: #D6D6D6
 //     }
 // }
+ion-item submenu-item{
+         
+}
+
 ion-menu {
     --background: var(--ion-color-dark-cinzento) !important;
     ion-content {
@@ -20,6 +24,7 @@ ion-menu {
                 padding-right: 10px !important;
             }
         }
+        
     }
 }
 
