@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ModalOneboardingPage } from '../modal-oneboarding/modal-oneboarding.page';
-
+import { MenuController } from '@ionic/angular';
 @Component({
   selector: 'app-verificacao',
   templateUrl: './verificacao.page.html',
@@ -9,7 +9,11 @@ import { ModalOneboardingPage } from '../modal-oneboarding/modal-oneboarding.pag
 })
 export class VerificacaoPage implements OnInit {
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController,
+    private menu: MenuController) {
+      this.menu.swipeGesture(false);
+    }
+  
 
   ionViewDidEnter() {
     this.oneboarding();

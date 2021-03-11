@@ -6,6 +6,8 @@ import { LoadingController, NavController, ToastController } from '@ionic/angula
 import { User } from 'app/interface/user';
 import { __await } from 'tslib';
 import { LoginService } from '../login/login.service';
+import { MenuController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-cadastro',
@@ -24,7 +26,9 @@ export class CadastroPage implements OnInit {
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     private afs: AngularFirestore,
-    private fBuilder: FormBuilder) {
+    private fBuilder: FormBuilder,
+    private menu: MenuController) {
+      this.menu.swipeGesture(false);
       this.fGroup = this.fBuilder.group({
         'nome': [null, Validators.compose([
           Validators.required
