@@ -59,12 +59,18 @@
           </ion-item>
         </ion-menu-toggle>
 
-        <ion-item>
-          <ion-button slot="end" fill="clear" (click)="logout()" size="large" color="light">Sair</ion-button>
-        </ion-item>
+        <div class="spacer"></div>
+
+        
 
       </ion-list>
     </ion-content>
+
+    <ion-footer-bar class="bar-stable">
+      <ion-item>
+        <ion-button slot="end" fill="clear" (click)="logout()" size="large" color="light">Sair</ion-button>
+      </ion-item>
+    </ion-footer-bar>
   </ion-menu>
   <ion-router-outlet id="mainMenu"></ion-router-outlet>
 </ion-app>
