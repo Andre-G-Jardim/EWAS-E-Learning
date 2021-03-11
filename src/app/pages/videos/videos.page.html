@@ -1,9 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>videos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="toolbar-titulo">Vídeos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+<ion-card *ngFor="let tema of videos" button [routerLink]="['/videos-tema', tema.id]">
+  <p>{{ tema.nomeTema }}</p>
+  <!-- Adicionar imagens na pasta img-cards-videos e o nome do arquivo no firebase -->
+  <img src="../assets/img-cards-videos/{{ tema.imagem }}">
+</ion-card>
 </ion-content>

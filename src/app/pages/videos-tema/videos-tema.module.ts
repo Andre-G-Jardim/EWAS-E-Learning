@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { VideosTemaPageRoutingModule } from './videos-tema-routing.module';
 
 import { VideosTemaPage } from './videos-tema.page';
+import { SafeUrlPipe } from './safe-url.pipe';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { VideosTemaPage } from './videos-tema.page';
     IonicModule,
     VideosTemaPageRoutingModule
   ],
-  declarations: [VideosTemaPage]
+  declarations: [VideosTemaPage, SafeUrlPipe]
 })
 export class VideosTemaPageModule {}

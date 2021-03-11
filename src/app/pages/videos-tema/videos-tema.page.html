@@ -1,9 +1,15 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>videos-tema</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="toolbar-titulo">Vídeos sobre {{video.nomeTema}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item *ngFor="let video of video.videos">
+    <iframe  width="560" height="315" [src]="video | safeUrl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </ion-item>
 
 </ion-content>
