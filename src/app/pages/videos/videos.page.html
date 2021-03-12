@@ -12,8 +12,7 @@
   <ion-card *ngFor="let tema of videos" button [routerLink]="['/videos-tema', tema.id]" color="dark-ciano">
     
     <!-- Adicionar imagens na pasta img-cards-videos e o nome do arquivo no firebase -->
-    <!--<ion-img src="../assets/img-cards-videos/{{ tema.imagem }}"></ion-img>-->
-    <ion-img src="../assets/img-cards-videos/videos-metodos.png"></ion-img>
+    <ion-img src="../assets/img-cards-videos/{{ tema.imagem }}"></ion-img>
 
     <ion-card-content>
       <ion-icon name="female-outline" slot="start"></ion-icon>
