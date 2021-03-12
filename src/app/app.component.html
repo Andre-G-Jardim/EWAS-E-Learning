@@ -5,7 +5,7 @@
         <ion-title class="toolbar-titulo">Menu</ion-title>
       </ion-toolbar>
     </ion-header>
-    
+
     <ion-content>
 
       <ion-item>
@@ -25,13 +25,13 @@
             <ion-label>Materiais</ion-label>
           </ion-item>
 
-          <ion-item submenu-item>
+          <ion-item submenu-item routerLink="/metodos">
             <ion-icon name="arrow-dropright" slot="start"></ion-icon>
             <ion-icon name="reader" slot="start"></ion-icon>
             <ion-label>Métodos</ion-label>
           </ion-item>
 
-          <ion-item submenu-item>
+          <ion-item submenu-item routerLink="/videos">
             <ion-icon name="arrow-dropright" slot="start"></ion-icon>
             <ion-icon name="logo-youtube" slot="start"></ion-icon>
             <ion-label>Vídeos</ion-label>
@@ -61,18 +61,18 @@
 
         <div class="spacer"></div>
 
-        
+
 
       </ion-list>
     </ion-content>
 
-    <ion-footer-bar class="bar-stable">
+    <ion-footer class="bar-stable">
       <ion-item>
-        
+
         <ion-button slot="end" fill="clear" (click)="logout()" size="large" color="light">
           <ion-icon name="log-out-outline" slot="end"></ion-icon>Sair</ion-button>
       </ion-item>
-    </ion-footer-bar>
+    </ion-footer>
   </ion-menu>
   <ion-router-outlet id="mainMenu"></ion-router-outlet>
 </ion-app>
