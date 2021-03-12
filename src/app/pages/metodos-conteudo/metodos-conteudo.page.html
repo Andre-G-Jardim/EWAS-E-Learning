@@ -24,7 +24,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="5">
-            <p class="titulo" id="fcolor"><b>Efetividade</b></p>
+            <h4><b>Efetividade</b></h4>
             <ion-row>
               <ion-col size-md="6" size-xs="12">
                 <p>{{ metodo.efetividadeImagem }}</p>
@@ -34,7 +34,7 @@
                 <p>{{ metodo.efetividadeConteudo }}</p>
               </ion-col>
             </ion-row>
-            <ion-row>
+            <ion-row *ngIf="metodo.efetividadeConteudo2">
               <ion-col size-md="6" size-xs="12">
                 <p>{{ metodo.efetividadeImagem2 }}</p>
               </ion-col>
@@ -43,7 +43,7 @@
                 <p>{{ metodo.efetividadeConteudo2 }}</p>
               </ion-col>
             </ion-row>
-            <h4><b>{{ metodo.efetividadeConclusao }}</b></h4>
+            <p id="fcolor" class="titulo"><b>{{ metodo.efetividadeConclusao }}</b></p>
           </ion-col>
           <ion-col size="7">
             <li *ngFor="let conteudo of metodo.conteudo" style="margin-bottom: 1em;">{{ conteudo }}</li>
