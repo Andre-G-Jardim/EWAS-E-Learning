@@ -79,8 +79,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/videos-tema/videos-tema.module').then( m => m.VideosTemaPageModule),
     canActivate: [AuthGuard]
   }
-
-
 ];
 
 @NgModule({
