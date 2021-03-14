@@ -36,4 +36,8 @@ export class LoginService {
     return this.afa;
   }
 
+  redefinirSenha(usuario: User){
+    return this.afa.sendPasswordResetEmail(usuario.email);
+  }
+
 }

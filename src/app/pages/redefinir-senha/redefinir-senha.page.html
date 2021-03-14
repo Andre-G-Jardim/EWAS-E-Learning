@@ -15,9 +15,9 @@
         <form #formLogin="ngForm" (ngSubmit)="onSubmit(formLogin)">
           <ion-item>
             <ion-label position="floating">E-mail</ion-label>
-            <ion-input name="email" type="email" ngModel required email #emailCtrl="ngModel"></ion-input>
+            <ion-input name="email" type="email" ngModel required email #emailCtrl="ngModel" [(ngModel)]="usuario.email"></ion-input>
           </ion-item>
-          <ion-button type="submit" expand="block" size="large" color="dark-ciano">Enviar</ion-button>
+          <ion-button type="submit" expand="block" size="large" color="amarelo">Enviar</ion-button>
         </form>
       </ion-col>
     </ion-row>
