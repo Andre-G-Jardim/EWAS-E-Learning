@@ -63,7 +63,13 @@ const routes: Routes = [
     path: 'metodos-conteudo/:id',
     loadChildren: () => import('./pages/metodos-conteudo/metodos-conteudo.module').then( m => m.MetodosConteudoPageModule),
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'redefinir-senha',
+    loadChildren: () => import('./pages/redefinir-senha/redefinir-senha.module').then( m => m.RedefinirSenhaPageModule),
+    canActivate: [LoginGuard]
   }
+
 
 ];
 
