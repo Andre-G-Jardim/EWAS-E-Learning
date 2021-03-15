@@ -78,6 +78,11 @@ const routes: Routes = [
     path: 'videos-tema/:id',
     loadChildren: () => import('./pages/videos-tema/videos-tema.module').then( m => m.VideosTemaPageModule),
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'redefinir-senha',
+    loadChildren: () => import('./pages/redefinir-senha/redefinir-senha.module').then( m => m.RedefinirSenhaPageModule),
+    canActivate: [LoginGuard]
   }
 ];
 

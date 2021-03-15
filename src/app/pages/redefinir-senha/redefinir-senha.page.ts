@@ -3,31 +3,23 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { User } from 'app/interface/user';
-import { LoginService } from './login.service';
-import { MenuController } from '@ionic/angular';
+import { LoginService } from '../login/login.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-redefinir-senha',
+  templateUrl: './redefinir-senha.page.html',
+  styleUrls: ['./redefinir-senha.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class RedefinirSenhaPage implements OnInit {
   private loading: any;
-  public usuarioLogin: User = {};
+  public usuario: User = {};
 
   constructor(private loginService: LoginService,
-    private router: Router,
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
-    private menu: MenuController) {
-      this.menu.swipeGesture(false);
-     }
+    private router: Router) { }
 
   ngOnInit() {
-  }
-
-  redefinirSenha(){
-    this.router.navigateByUrl("redefinir-senha");
   }
 
   async onSubmit(form: NgForm){
@@ -36,17 +28,21 @@ export class LoginPage implements OnInit {
     }
     await this.presentLoading();
     try{
-      await this.loginService.login(this.usuarioLogin);
-    } catch(error ){
+      await this.loginService.redefinirSenha(this.usuario);
+      await this.presentToast("Link enviado para o seu email");
+      this.router.navigateByUrl("login");
+    } catch(error){
       console.error(error);
       let message: string;
       switch(error.code){
+        case 'auth/invalid-email':
+          message = "Email inválido!";
+          break;
         case 'auth/user-not-found':
-          message = "Usuário não encontrado";
+          message = "Usuário não encontrado! Verifique se você está cadastrado."
           break;
-        case 'auth/wrong-password':
-          message = "Senha incorreta! Por favor, tente novamente.";
-          break;
+        case 'auth/too-many-requests':
+          message = "Ops... notamos uma atividade suspeita, muitos pedidos foram feitos. Tente repetir mais tarde."
       }
       this.presentToast(message);
     } finally{
@@ -57,18 +53,16 @@ export class LoginPage implements OnInit {
   async presentLoading() {
     this.loading = await this.loadingCtrl.create({
       cssClass: 'my-custom-class',
-      message: 'Autenticando...'});
+      message: 'Por favor, aguarde...'});
     return this.loading.present();
   }
 
   async presentToast(message: string) {
     const toast = await this.toastCtrl.create({
       message,
-      duration: 4000
+      duration: 3000
     });
     toast.present();
   }
 
-
 }
-
