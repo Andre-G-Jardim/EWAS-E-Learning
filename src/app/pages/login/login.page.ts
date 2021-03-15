@@ -23,6 +23,7 @@ export class LoginPage implements OnInit {
   }
 
   redefinirSenha(){
+
     this.router.navigateByUrl("redefinir-senha");
   }
 
