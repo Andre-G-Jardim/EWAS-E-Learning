@@ -3,6 +3,10 @@
 //         --ion-background-color: #D6D6D6
 //     }
 // }
+.spacer {
+    flex-grow: 1;
+}
+
 ion-menu {
     --background: var(--ion-color-dark-cinzento) !important;
     ion-content {
@@ -10,7 +14,7 @@ ion-menu {
         ion-list {
             background: var(--ion-color-dark-cinzento) !important;
             --color: #ffffff !important;
-            
+
         }
         ion-item {
             --background: var(--ion-color-dark-cinzento) !important;
@@ -19,6 +23,16 @@ ion-menu {
             ion-icon {
                 padding-right: 10px !important;
             }
+        }
+
+    }
+    ion-footer{
+        --background: var(--ion-color-dark-cinzento) !important;
+
+        ion-item {
+            --background: var(--ion-color-dark-cinzento) !important;
+            --color: #ffffff !important;
+            --highlight-height: 0px;
         }
     }
 }

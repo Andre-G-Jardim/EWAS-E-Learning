@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size-md="4" size-xs="10">
+        <h1>Esqueceu sua senha?</h1>
+        <p>Informe seu email e enviaremos um link</p>
+        <form #formLogin="ngForm" (ngSubmit)="onSubmit(formLogin)">
+          <ion-item>
+            <ion-label position="floating">E-mail</ion-label>
+            <ion-input name="email" type="email" ngModel required email #emailCtrl="ngModel" [(ngModel)]="usuario.email"></ion-input>
+          </ion-item>
+          <ion-button type="submit" expand="block" size="large" color="amarelo">Enviar</ion-button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { User } from 'app/interface/user';
 import { LoginService } from './login.service';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -17,13 +18,16 @@ export class LoginPage implements OnInit {
   constructor(private loginService: LoginService,
     private router: Router,
     private loadingCtrl: LoadingController,
-    private toastCtrl: ToastController) { }
+    private toastCtrl: ToastController,
+    private menu: MenuController) {
+      this.menu.swipeGesture(false);
+     }
 
   ngOnInit() {
   }
 
   redefinirSenha(){
-    this.router.navigateByUrl("");
+    this.router.navigateByUrl("redefinir-senha");
   }
 
   async onSubmit(form: NgForm){
