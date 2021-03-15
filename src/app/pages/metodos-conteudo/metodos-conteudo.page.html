@@ -26,19 +26,19 @@
           <ion-col size="5">
             <h4><b>Efetividade</b></h4>
             <ion-row>
-              <ion-col size-md="6" size-xs="12">
-                <p>{{ metodo.efetividadeImagem }}</p>
+              <ion-col size-md="3" size-xs="12">
+                <img  src="../assets/img-metodos/{{ metodo.efetividadeImagem }}">
               </ion-col>
-              <ion-col size-md="6" size-xs="12">
+              <ion-col size-md="9" size-xs="12">
                 <p><b>{{ metodo.efetividadeTitulo }}</b></p>
                 <p>{{ metodo.efetividadeConteudo }}</p>
               </ion-col>
             </ion-row>
             <ion-row *ngIf="metodo.efetividadeConteudo2">
-              <ion-col size-md="6" size-xs="12">
-                <p>{{ metodo.efetividadeImagem2 }}</p>
+              <ion-col size-md="3" size-xs="12">
+                <img  src="../assets/img-metodos/{{ metodo.efetividadeImagem2 }}">
               </ion-col>
-              <ion-col size-md="6" size-xs="12">
+              <ion-col size-md="9" size-xs="12">
                 <p><b>{{ metodo.efetividadeTitulo2 }}</b></p>
                 <p>{{ metodo.efetividadeConteudo2 }}</p>
               </ion-col>
