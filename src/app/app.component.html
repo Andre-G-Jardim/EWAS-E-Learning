@@ -64,14 +64,15 @@
     </ion-content>
 
     <ion-footer class="bar-stable">
-      
-      <ion-item>
-        <ion-button slot="end" fill="clear" (click)="logout()" size="large" color="light">
-          <ion-icon name="log-out-outline" slot="end"></ion-icon>Sair</ion-button>
-      </ion-item>
-
+      <ion-menu-toggle>
+        <ion-item>
+          <ion-button slot="end" fill="clear" (click)="logout()" size="large" color="light">
+            <ion-icon name="log-out-outline" slot="end"></ion-icon>Sair
+          </ion-button>
+        </ion-item>
+      </ion-menu-toggle>
     </ion-footer>
-    
+
   </ion-menu>
   <ion-router-outlet id="mainMenu"></ion-router-outlet>
 </ion-app>
