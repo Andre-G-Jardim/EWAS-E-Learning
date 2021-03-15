@@ -9,52 +9,32 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col size="12" offset="1">
-      <ion-text>
-         <p class="titulo">Olá</p>
-        <p class="subtitulo">Ficou com dúvida em algo?<br>
-        Pergunte através desse canal.</p>
-      </ion-text>
-      </ion-col>
-      <ion-col size="12" offset="1">
-
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col size="10" offset="1">
-        <ion-item>
-          <ion-label position="floating">Nome</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col size="10" offset="1">
-        <ion-item>
-          <ion-label position="floating">Email</ion-label>
-          <ion-input></ion-input>
-        </ion-item>
+      <ion-col size-md="6">
+        <ion-text>
+          <p class="titulo">Olá</p>
+          <p class="subtitulo">Ficou com dúvida em algo?<br>
+            Pergunte através desse canal.</p>
+        </ion-text>
+        <form class="contact-form" (submit)="sendEmail($event)">
+          <ion-item>
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input type="text" name="user_name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" name="user_email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">O que você deseja perguntar?</ion-label>
+            <ion-textarea name="message" rows="5"></ion-textarea>
+          </ion-item>
+          <ion-row class="ion-justify-content-end">
+            <ion-col size-xs="6" size-md="6">
+              <ion-button type="submit" value="Send" expand="block" size="large" color="dark-ciano">Enviar</ion-button>
+            </ion-col>
+          </ion-row>
+        </form>
       </ion-col>
     </ion-row>
-
-    <ion-row>
-      <ion-col size="10" offset="1">
-        <ion-item>
-          <ion-label position="floating">O que você deseja perguntar?</ion-label>
-          <ion-textarea rows="5"></ion-textarea>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-row><h5></h5></ion-row>
-
-    <ion-row class="ion-justify-content-end">
-      <ion-col size-xs="6" size-md="3">
-        <ion-button expand="block" size="large" color="dark-ciano">Enviar</ion-button>
-      </ion-col>
-    </ion-row>
-
-</ion-grid>
+  </ion-grid>
 </ion-content>
