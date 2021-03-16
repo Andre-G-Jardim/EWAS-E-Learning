@@ -10,9 +10,8 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col id="cont" size-sm="10" offset-md="2" size-md="8" size-lg="6" offset-lg="3">
-        <ion-list style="background: #D6D6D6;" >
-          <ion-item style="--background: {{ metodo.corP }}; margin-bottom: 1em;" *ngFor="let metodo of metodos" button [routerLink]="['/metodos-conteudo', metodo.id]">
+      <ion-col id="cont" size-xs="10" offset-xs="1" offset-md="2" size-md="5" size-lg="4.5" offset-lg="1" *ngFor="let metodo of metodos">
+          <ion-item style="--background: {{ metodo.corP }}; margin-bottom: 1em;" button [routerLink]="['/metodos-conteudo', metodo.id]">
             <ion-avatar slot="start">
               <img src="../assets/img-metodos/med.png">
             </ion-avatar>
@@ -20,7 +19,7 @@
               {{ metodo.titulo }}
             </ion-label>
           </ion-item>
-        </ion-list>
+
       </ion-col>
     </ion-row>
   </ion-grid>
