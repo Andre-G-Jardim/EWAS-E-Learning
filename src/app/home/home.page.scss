@@ -39,6 +39,7 @@ ion-content{
 
 ion-grid{
   height: 100%;
+  padding: 0.1em;
 }
 
 ion-row{
@@ -51,4 +52,37 @@ ion-row{
 
 .img{
   margin-bottom: 5em;
+}
+
+#container-principal{
+  background: var(--ion-color-ghost);
+  padding: 1em;
+}
+
+
+#titulo{
+  font-size: 3.5em;
+  margin-bottom: 0em;
+}
+
+#subtitulo{
+  font-size: 4em;
+  color: var(--ion-color-dark-ciano);
+  margin-bottom: 1em;
+}
+
+#texto{
+  text-align: justify;
+  margin-bottom: 1em;
+  font-size: 1.4em;
+}
+
+p{
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+#ca{
+  padding: 1em;
+  margin-bottom: 2em;
 }
