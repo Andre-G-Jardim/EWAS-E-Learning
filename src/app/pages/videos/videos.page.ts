@@ -21,7 +21,7 @@ export class VideosPage implements OnInit {
     'Você sabe o tempo de duração de um DIU?'
     ];
     private messageToast : string[] = [
-    'Confira na aba Materias', 
+    'Confira na aba Materiais', 
     'Entre em contato conosco pelo nosso canal de dúvidas!',
     'Confira nos Métodos contraceptivos',
     'Ele é um dos mais efetivos',
