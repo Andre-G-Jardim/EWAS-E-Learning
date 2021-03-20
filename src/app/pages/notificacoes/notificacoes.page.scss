@@ -16,4 +16,10 @@ ion-grid{
     justify-content: center;
   }
 
-// cores
+  ion-content{
+    --background: var(--ion-color-light-cinzento);
+  }
+  
+  #cont{
+    margin-top: 2em;
+  }
