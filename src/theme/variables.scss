@@ -24,6 +24,11 @@
   --ion-color-dark-cinzento: #969696 ;
   --ion-color-dark-cinzento-rgb: 150, 150, 150;
 
+  /** Ghost **/
+  --ion-color-ghost: #f8f8ff;
+  --ion-color-ghost-rgb: 248, 248, 255;
+
+
   /** primary **/
   --ion-color-primary: #3880ff; //4A88A1 3880ff
   --ion-color-primary-rgb: 56, 128, 255;
@@ -290,4 +295,8 @@
 .ion-color-dark-cinzento{
   --ion-color-base: var(--ion-color-dark-cinzento);
   --ion-color-base-rgb: var(--ion-color-dark-cinzento-rgb);
+}
+.ion-color-ghost{
+  --ion-color-base: var(--ion-color-ghost);
+  --ion-color-base-rgb: var(--ion-color-ghost-rgb);
 }

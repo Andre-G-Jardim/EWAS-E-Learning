@@ -1,25 +1,22 @@
 <ion-app>
   <ion-menu menu-id="main-menu" content-id="mainMenu">
-    <ion-header>
-      <ion-toolbar color="azul-coal">
-        <ion-title class="toolbar-titulo">Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
 
     <ion-content>
 
       <ion-item>
-        <ion-avatar slot="start">
-          <img src="../assets/EWAS_logo.png">
-        </ion-avatar>
-        <ion-label>Nome do Usuário
-          <ion-label color="light">email@procempa.com.br</ion-label>
+        <ion-label>{{usuario.nome}}
+          <ion-label>{{usuario.email}}</ion-label>
         </ion-label>
       </ion-item>
 
       <ion-list>
 
         <ion-menu-toggle>
+          <ion-item routerLink="/home">
+            <ion-icon name="home" slot="start"></ion-icon>
+            <ion-label>Início</ion-label>
+          </ion-item>
+
           <ion-item>
             <ion-icon name="arrow-down" slot="start"></ion-icon>
             <ion-label>Materiais</ion-label>
@@ -67,14 +64,15 @@
     </ion-content>
 
     <ion-footer class="bar-stable">
-      
-      <ion-item>
-        <ion-button slot="end" fill="clear" (click)="logout()" size="large" color="light">
-          <ion-icon name="log-out-outline" slot="end"></ion-icon>Sair</ion-button>
-      </ion-item>
-
+      <ion-menu-toggle>
+        <ion-item>
+          <ion-button slot="end" fill="clear" (click)="logout()" size="large" color="ghost">
+            <ion-icon name="log-out-outline" slot="end"></ion-icon>Sair
+          </ion-button>
+        </ion-item>
+      </ion-menu-toggle>
     </ion-footer>
-    
+
   </ion-menu>
   <ion-router-outlet id="mainMenu"></ion-router-outlet>
 </ion-app>
