@@ -48,7 +48,9 @@ export class MetodosPage implements OnInit {
 
     try {
       this.toastCtrl.dismiss();
-    } catch(e) {}
+    } catch(e) {
+      console.error(e);
+    }
     let toast = await this.toastCtrl.create({ 
       animated: true,
       header: this.notificacoes[this.index].titulo,

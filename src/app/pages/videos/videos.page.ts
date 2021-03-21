@@ -27,38 +27,38 @@ export class VideosPage implements OnInit {
     this.videosSubscription = this.videoService.getVideos().subscribe(data => {
       this.videos = data;
     });
-    this.notificacaoSubscription = this.notificacaoService.getNotificacao().subscribe(data =>{
+    this.notificacaoSubscription = this.notificacaoService.getNotificacao().subscribe(data => {
       this.notificacoes = data;
     });
   }
 
   ionViewDidEnter() {
-    if (this.notificacoes != null){
-      this.callToast()
-    }
-   }
+    this.index = this.randomInt(0, (this.notificacoes.length - 1))
+    this.toastHome();
+  }
 
   ngOnInit() {
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.videosSubscription.unsubscribe();
   }
 
-  async toastHome(){
-
+  async toastHome() {
     try {
       this.toastCtrl.dismiss();
-    } catch(e) {}
-    let toast = await this.toastCtrl.create({ 
+    } catch(e) {
+      console.error(e);
+    }
+    let toast = await this.toastCtrl.create({
       animated: true,
       header: this.notificacoes[this.index].titulo,
       message: this.notificacoes[this.index].texto,
       cssClass: 'toast-Custon-Class round',
       mode: 'ios',
       duration: 5000,
-      buttons: [{icon:'notifications'}]
-      
+      buttons: [{ icon: 'notifications' }]
+
     });
 
     toast.present();
@@ -67,10 +67,4 @@ export class VideosPage implements OnInit {
   public randomInt = (min: number, max: number): number => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
-
-
-  public callToast(){
-    this.index = this.randomInt(0, (this.notificacoes.length-1))
-    this.toastHome();
-  }
 }
