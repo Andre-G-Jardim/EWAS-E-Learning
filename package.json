@@ -20,6 +20,7 @@
     "@angular/platform-browser": "~11.0.5",
     "@angular/platform-browser-dynamic": "~11.0.5",
     "@angular/router": "~11.0.5",
+    "@angular/service-worker": "~11.0.5",
     "@ionic/angular": "^5.5.2",
     "emailjs-com": "^2.6.4",
     "firebase": "^8.2.9",

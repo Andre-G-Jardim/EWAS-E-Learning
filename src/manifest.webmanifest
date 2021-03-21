@@ -1,0 +1,51 @@
+{
+  "name": "EWAS E-Learning",
+  "short_name": "EWAS E-Learning",
+  "start_url": "/home.html",
+  "display": "standalone",
+  "background_color": "#D6D6D6",
+  "theme_color": "#4A88A1",
+  "orientation": "portrait-primary",
+  "icons": [
+      {
+          "src": "src/assets/icon/logos/ewas-64x64.png",
+          "type": "image/png",
+          "size": "64x64"
+      },
+      {
+          "src": "src/assets/icon/logos/ewas-96x96.png",
+          "type": "image/png",
+          "size": "96x96"
+      },
+      {
+          "src": "src/assets/icon/logos/ewas-128x128.png",
+          "type": "image/png",
+          "size": "128x128"
+      },
+      {
+          "src": "src/assets/icon/logos/ewas-144x144.png",
+          "type": "image/png",
+          "size": "144x144"
+      },
+      {
+          "src": "src/assets/icon/logos/ewas-152x152.png",
+          "type": "image/png",
+          "size": "152x152"
+      },
+      {
+          "src": "src/assets/icon/logos/ewas-192x192.png",
+          "type": "image/png",
+          "size": "192x192"
+      },
+      {
+          "src": "src/assets/icon/logos/ewas-384x384.png",
+          "type": "image/png",
+          "size": "384x384"
+      },
+      {
+          "src": "src/assets/icon/logos/EWAS_logo.png",
+          "type": "image/png",
+          "size": "500x500"
+      }
+  ]
+}
