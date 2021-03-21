@@ -63,3 +63,10 @@ ion-toolbar{
 .ion-invalid.ion-touched ion-label{
   color: var(--ion-color-danger);
 }
+
+.toast-Custon-Class {
+  --color:#131212;
+  --background:#f1f1f1;
+  text-align: justify;
+  --button-color: #131212;
+}
