@@ -6,64 +6,21 @@
     <ion-title class="toolbar-titulo">Notificações</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content color="light-cinzento">
   <ion-grid>
     <ion-row>
-      <ion-col size-sm="6">
+      <ion-col size-xs="12" size-sm="12" size-md="6" *ngFor="let notifi of notificacoes">
         <ion-card>
           <ion-card-header>
-            <ion-card-title>Você sabe qual a efetividade da pílula oral combinada?</ion-card-title>
+            <ion-card-title> 
+              {{ notifi.titulo}}
+            </ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            Confira na aba Materiais!
+            {{ notifi.texto }}
           </ion-card-content>
         </ion-card>
-
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Está com alguma dúvida?</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            Entre em contato conosco pelo nosso canal de dúvidas!
-          </ion-card-content>
-        </ion-card>
-
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Você sabe a diferença da Minipílula para a Oral Combinada?</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            Confira nos Métodos contraceptivos!
-          </ion-card-content>
-        </ion-card>
-
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Já ouviu falar do implante hormonal?</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            Ele é um dos mais efetivos, confira na nos métodos contraceptivos!
-          </ion-card-content>
-        </ion-card>
-
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Você sabe quando o anticomcepcional injetável não é indicado</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            Confira nos Materiais de métodos contraceptivos!
-          </ion-card-content>
-        </ion-card>
-
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Você sabe o tempo de duração de um DIU?</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            Confira na aba DIU nos métodos contraceptivos
-          </ion-card-content>
-        </ion-card>
-
       </ion-col>
     </ion-row>
   </ion-grid>

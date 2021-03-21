@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
 import { Metodo } from 'app/interface/metodo';
+import { Notificacao } from 'app/interface/notificacao'
 import { Subscription } from 'rxjs';
 import { MetodosConteudoService } from '../metodos-conteudo/metodos-conteudo.service';
+import { NotificacoesService } from '../notificacoes/notificacoes.service';
 
 @Component({
   selector: 'app-metodos',
@@ -12,34 +14,26 @@ import { MetodosConteudoService } from '../metodos-conteudo/metodos-conteudo.ser
 export class MetodosPage implements OnInit {
   public metodos = new Array<Metodo>();
   private metodosSubscription: Subscription;
-  private headerToast : string[] = [
-    'Você sabe qual a efetividade da pílula oral combinada?', 
-    'Está com alguma dúvida?', 
-    'Você sabe a diferença da Minipílula para a Oral Combinada?',
-    'Já ouviu falar do implante hormonal?', 
-    'Você sabe quando o anticomcepcional injetável não é indicado?',
-    'Você sabe o tempo de duração de um DIU?'
-    ];
-    private messageToast : string[] = [
-    'Confira na aba Materiais', 
-    'Entre em contato conosco pelo nosso canal de dúvidas!',
-    'Confira nos Métodos contraceptivos',
-    'Ele é um dos mais efetivos',
-    'Confira nos Materiais de métodos contraceptivos',
-    'Confira na aba DIU nos métodos contraceptivos'
-    ];
-    private index = 0;
+
+  public notificacoes = new Array<Notificacao>();
+  private notificacaoSubscription: Subscription;
+  private index = 0;
 
   constructor(
-    private metodosService: MetodosConteudoService, 
-    private toastCtrl: ToastController) {
+    private metodosService: MetodosConteudoService,
+    private notificacaoService: NotificacoesService, 
+    private toastCtrl: ToastController) 
+    {
     this.metodosSubscription = this.metodosService.getMetodos().subscribe(data => {
       this.metodos = data;
+    });
+    this.notificacaoSubscription = this.notificacaoService.getNotificacao().subscribe(data =>{
+      this.notificacoes = data;
     })
   }
 
   ionViewDidEnter() {
-    this.index = this.randomInt(0, (this.headerToast.length-1))
+    this.index = this.randomInt(0, (this.notificacoes.length-1))
     this.toastHome();
    }
 
@@ -57,8 +51,8 @@ export class MetodosPage implements OnInit {
     } catch(e) {}
     let toast = await this.toastCtrl.create({ 
       animated: true,
-      header: this.headerToast[this.index],
-      message: this.messageToast[this.index],
+      header: this.notificacoes[this.index].titulo,
+      message: this.notificacoes[this.index].texto,
       cssClass: 'toast-Custon-Class round',
       mode: 'ios',
       duration: 5000,

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router'
 import { Notificacao } from 'app/interface/notificacao';
 import { Subscription } from 'rxjs';
 import { NotificacoesService } from './notificacoes.service'
@@ -10,25 +9,22 @@ import { NotificacoesService } from './notificacoes.service'
   styleUrls: ['./notificacoes.page.scss'],
 })
 export class NotificacoesPage implements OnInit {
-  public notificacao: Notificacao = {};
-  private notificacaoId: string = null;
+  public notificacoes = new Array<Notificacao>();
   private notificacaoSubscription: Subscription;
 
-  constructor(
-    private activateRoute: ActivatedRoute, 
+  constructor( 
     private notificacaoService: NotificacoesService) 
     {
-    this.notificacaoId = activateRoute.snapshot.params['id'];
-    if(this.notificacaoId) this.loadNotificacao();
-   }
+    this.notificacaoSubscription = this.notificacaoService.getNotificacao().subscribe(data =>{
+      this.notificacoes = data;
+    })
+  }  
 
   ngOnInit() {
   }
 
-  loadNotificacao(){
-    this.notificacaoSubscription = this.notificacaoService.getMetodo(this.notificacaoId).subscribe(data => {
-      this.notificacao = data;
-    })
+  ngOnDestroy(){
+    this.notificacaoSubscription.unsubscribe();
   }
 
 }

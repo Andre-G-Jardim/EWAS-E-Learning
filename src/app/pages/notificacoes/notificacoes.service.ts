@@ -25,8 +25,6 @@ export class NotificacoesService {
       })
     )
   }
+  
 
-  getMetodo(id: string) {
-    return this.notificacaoCollection.doc<Notificacao>(id).valueChanges();
-  }
 }
