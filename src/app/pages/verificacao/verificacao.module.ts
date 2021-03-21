@@ -16,7 +16,7 @@ import { ModalOneboardingPage } from '../modal-oneboarding/modal-oneboarding.pag
     IonicModule,
     VerificacaoPageRoutingModule
   ],
-  declarations: [VerificacaoPage, ModalOneboardingPage],
+  declarations: [VerificacaoPage],
   entryComponents: [ModalOneboardingPage]
 })
 export class VerificacaoPageModule {}

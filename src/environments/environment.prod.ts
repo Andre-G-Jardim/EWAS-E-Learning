@@ -8,5 +8,11 @@ export const environment = {
     messagingSenderId: "1086279744242",
     appId: "1:1086279744242:web:48a3cdebaa51b29e672e6b",
     measurementId: "G-JKY5QL881T"
+  },
+
+  emailjs: {
+    serviceID: "service_4hyi3vx",
+    templateID: "canal_de_duvidas",
+    userID:"user_6fDsn00bzpHK3Ddjfskl6"
   }
 };
