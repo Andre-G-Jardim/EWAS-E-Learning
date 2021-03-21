@@ -11,8 +11,8 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col size-sm="5" offset-sm="3.5">
-        <ion-card *ngFor="let video of video.videos" color="light-cinzento">
+      <ion-col size-xs="12" size-md="4.5" offset-md="1" *ngFor="let video of video.videos">
+        <ion-card color="light-cinzento">
           <div class="container">
             <iframe class="responsive-iframe" [src]="video | safeUrl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
