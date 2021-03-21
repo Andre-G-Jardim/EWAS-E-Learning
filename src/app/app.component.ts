@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { User } from './interface/user';
 import { LoginService } from './pages/login/login.service';
 
 @Component({
@@ -6,8 +8,15 @@ import { LoginService } from './pages/login/login.service';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
-  constructor(private loginService: LoginService) {}
+export class AppComponent implements OnInit {
+  public usuario: User = {};
+  private userId: string = null;
+
+  constructor(private loginService: LoginService, private afa: AngularFireAuth) {}
+
+  ngOnInit(){
+    this.loadUsuario();
+  }
 
   async logout(){
     try{
@@ -17,5 +26,16 @@ export class AppComponent {
       console.error(error);
 
     }
+  }
+
+  loadUsuario(){
+    this.afa.onAuthStateChanged((user) =>
+    {
+      this.userId = user.uid;
+      this.loginService.getIdUser(this.userId).subscribe((data) => {
+         this.usuario = data;
+         this.usuario.email = user.email;
+      })
+    })
   }
 }

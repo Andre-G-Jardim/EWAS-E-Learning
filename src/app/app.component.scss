@@ -8,30 +8,33 @@
 }
 
 ion-menu {
-    --background: var(--ion-color-dark-cinzento) !important;
+    --background: var(--ion-color-azul-coal) !important;
     ion-content {
-        --background: var(--ion-color-dark-cinzento) !important;
+        --background: var(--ion-color-azul-coal) !important;
         ion-list {
-            background: var(--ion-color-dark-cinzento) !important;
-            --color: #ffffff !important;
+            background: var(--ion-color-azul-coal) !important;
+            --color: var(--ion-color-ghost) !important;
 
         }
         ion-item {
-            --background: var(--ion-color-dark-cinzento) !important;
-            --color: #ffffff !important;
+            --background: var(--ion-color-azul-coal) !important;
+            --color: var(--ion-color-ghost) !important;
             --highlight-height: 0px;
             ion-icon {
                 padding-right: 10px !important;
             }
         }
+        ion-icon {
+          color: var(--ion-color-ghost);
+        }
 
     }
     ion-footer{
-        --background: var(--ion-color-dark-cinzento) !important;
+        --background: var(--ion-color-azul-coal) !important;
 
         ion-item {
-            --background: var(--ion-color-dark-cinzento) !important;
-            --color: #ffffff !important;
+            --background: var(--ion-color-azul-coal) !important;
+            //--color: #ffffff !important;
             --highlight-height: 0px;
         }
     }
