@@ -5,56 +5,56 @@
   "background_color": "#D6D6D6",
   "display": "standalone",
   "scope": "./",
-  "start_url": "/home.html",
+  "start_url": "https://ewas-e-learning.web.app/cadastro",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "src/assets/icon/logos/ewas-64x64.png",
+      "src": "src/assets/icons/ewas-64x64-full.png",
       "type": "image/png",
-      "size": "64x64",
-      "purpose": "maskable any"
+      "sizes": "64x64",
+      "purpose": "any"
     },
     {
-      "src": "src/assets/icon/logos/ewas-96x96.png",
+      "src": "src/assets/icons/ewas-96x96-full.png",
       "type": "image/png",
-      "size": "96x96",
-      "purpose": "maskable any"
+      "sizes": "96x96",
+      "purpose": "any"
     },
     {
-      "src": "src/assets/icon/logos/ewas-128x128.png",
+      "src": "src/assets/icons/ewas-128x128-full.png",
       "type": "image/png",
-      "size": "128x128",
-      "purpose": "maskable any"
+      "sizes": "128x128",
+      "purpose": "any"
     },
     {
-      "src": "src/assets/icon/logos/ewas-144x144.png",
+      "src": "src/assets/icon/ewas-144x144-full.png",
       "type": "image/png",
-      "size": "144x144",
-      "purpose": "maskable any"
+      "sizes": "144x144",
+      "purpose": "any"
     },
     {
-      "src": "src/assets/icon/logos/ewas-152x152.png",
+      "src": "src/assets/icons/ewas-152x152-full.png",
       "type": "image/png",
-      "size": "152x152",
-      "purpose": "maskable any"
+      "sizes": "152x152",
+      "purpose": "any"
     },
     {
-      "src": "src/assets/icon/logos/ewas-192x192.png",
+      "src": "src/assets/icons/ewas-192x192-full.png",
       "type": "image/png",
-      "size": "192x192",
-      "purpose": "maskable any"
+      "sizes": "192x192",
+      "purpose": "any"
     },
     {
-      "src": "src/assets/icon/logos/ewas-384x384.png",
+      "src": "src/assets/icons/ewas-384x384-full.png",
       "type": "image/png",
-      "size": "384x384",
-      "purpose": "maskable any"
+      "sizes": "384x384",
+      "purpose": "any"
     },
     {
-      "src": "src/assets/icon/logos/EWAS_logo.png",
+      "src": "src/assets/icons/ewas-512x512-full.png",
       "type": "image/png",
-      "size": "500x500",
-      "purpose": "maskable any"
+      "sizes": "512x512",
+      "purpose": "any"
     }
   ]
 }
