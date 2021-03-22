@@ -40,6 +40,7 @@ export class AppComponent implements OnInit {
     })
   }
 
+  /*
   ionViewWillEnter(){
     window.addEventListener('beforeinstallprompt', (e) => {
       // Prevent Chrome 67 and earlier from automatically showing the prompt
@@ -59,7 +60,9 @@ export class AppComponent implements OnInit {
       alert('display-mode is standalone');
     }
   }
+  */
 
+  /*
   abrirInstalacao(){
     debugger
     // hide our user interface that shows our button
@@ -76,4 +79,5 @@ export class AppComponent implements OnInit {
         this.deferredPrompt = null;
       });
   }
+  */
 }

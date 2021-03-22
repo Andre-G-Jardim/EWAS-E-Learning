@@ -1,60 +1,50 @@
 {
   "name": "EWAS E-Learning",
   "short_name": "EWAS E-Learning",
-  "theme_color": "#4A88A1",
-  "background_color": "#D6D6D6",
-  "display": "standalone",
+  "theme_color": "#264653",
+  "background_color": "#ffffff",
+  "display": "fullscreen",
   "scope": "./",
+  "lang": "pt-BR",
+  "orientation": "portrait",
+  "categories": ["educação", "saúde"],
   "start_url": "https://ewas-e-learning.web.app/cadastro",
-  "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "src/assets/icons/ewas-64x64-full.png",
+      "src": "assets/icons/ewas-48x48-full.png",
       "type": "image/png",
-      "sizes": "64x64",
-      "purpose": "any"
+      "sizes": "48x48",
+      "purpose": "any maskable"
     },
     {
-      "src": "src/assets/icons/ewas-96x96-full.png",
+      "src": "assets/icons/ewas-72x72-full.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/ewas-96x96-full.png",
       "type": "image/png",
       "sizes": "96x96",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
-      "src": "src/assets/icons/ewas-128x128-full.png",
-      "type": "image/png",
-      "sizes": "128x128",
-      "purpose": "any"
-    },
-    {
-      "src": "src/assets/icon/ewas-144x144-full.png",
+      "src": "assets/icon/ewas-144x144-full.png",
       "type": "image/png",
       "sizes": "144x144",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
-      "src": "src/assets/icons/ewas-152x152-full.png",
+      "src": "assets/icons/ewas-192x192-full.png",
       "type": "image/png",
       "sizes": "152x152",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
-      "src": "src/assets/icons/ewas-192x192-full.png",
-      "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any"
-    },
-    {
-      "src": "src/assets/icons/ewas-384x384-full.png",
-      "type": "image/png",
-      "sizes": "384x384",
-      "purpose": "any"
-    },
-    {
-      "src": "src/assets/icons/ewas-512x512-full.png",
+      "src": "assets/icons/ewas-512x512-full.png",
       "type": "image/png",
       "sizes": "512x512",
-      "purpose": "any"
+      "purpose": "any maskable"
     }
   ]
 }
