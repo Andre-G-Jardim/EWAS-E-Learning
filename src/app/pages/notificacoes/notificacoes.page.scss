@@ -1,26 +1,20 @@
 ion-card {
-    --background: var(--ion-color-dark-cinzento) !important;
-    --color: #FFFFFF !important;
-
+  --background: var(--ion-color-dark-cinzento) !important;
+  --color: #FFFFFF !important;
+  margin-bottom: 1em;
+  box-shadow: 2px 2px 5px 1px gray;
 }
 
-ion-grid{
-    height: 100%;
-  }
-  
-  ion-row{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+ion-row{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
 ion-col{
   margin-top: 0em;
   margin-bottom: 0em;
 }
 
-  ion-content{
-    --background: var(--ion-color-light-cinzento);
-  }
+ion-content{
+  --background: var(--ion-color-light-cinzento);
+}
